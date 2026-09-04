@@ -1,0 +1,10 @@
+django
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+django-filter
+requests
+googletrans==4.0.0-rc1
+google-generativeai
+psycopg2-binary
+SpeechRecognition

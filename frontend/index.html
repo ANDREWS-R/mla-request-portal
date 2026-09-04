@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Title and SEO Meta -->
+    <title>MLA Request Management & Summarization Portal</title>
+    <meta name="description" content="Secure portal for citizens to submit issues and for MLAs and Staff to manage and review constituency requests using AI-powered translation and summarization." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Translate Script & Custom Styles -->
+    <style>
+      html {
+        top: 0px !important;
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+      }
+      body {
+        top: 0px !important;
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+        position: static !important;
+      }
+      /* Position banner frame off-screen to avoid overlaying on headers */
+      iframe.goog-te-banner-frame,
+      .goog-te-banner-frame,
+      .goog-te-banner {
+        position: absolute !important;
+        top: -1000px !important;
+        left: -1000px !important;
+        visibility: hidden !important;
+        display: none !important;
+        height: 0px !important;
+        opacity: 0 !important;
+      }
+      #goog-gt-tt,
+      .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+      }
+      .goog-logo-link {
+        display: none !important;
+      }
+      .goog-te-gadget {
+        color: transparent !important;
+        font-size: 0px !important;
+      }
+      .goog-te-gadget .goog-te-combo {
+        margin: 0 !important;
+        padding: 6px 10px !important;
+        border-radius: 6px !important;
+        border: 1px solid #d97706 !important;
+        background-color: #fef3c7 !important;
+        color: #b45309 !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-weight: bold !important;
+        font-size: 0.8rem !important;
+        outline: none !important;
+        cursor: pointer;
+      }
+    </style>
+    <script type="text/javascript">
+      window.googleTranslateElementInit = function() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,ml,hi,ta,te,kn',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #0b0f19; color: #f3f4f6; font-family: 'Inter', sans-serif;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

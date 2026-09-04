@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: mla_postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: mla_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: mla_django_backend
+    restart: always
+    command: sh -c "python manage.py migrate && python manage.py seed_data && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_NAME=mla_db
+      - DB_USER=postgres
+      - DB_PASSWORD=Password123
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DEBUG=True
+      - SECRET_KEY=django-insecure-prod-key-goes-here-12345
+      - GEMINI_API_KEY=  # Insert your Gemini API key here for full AI services
+    depends_on:
+      - db
+    volumes:
+      - backend_media:/app/media
+
+  frontend:
+    build: ./frontend
+    container_name: mla_react_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  backend_media:

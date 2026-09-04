@@ -1,0 +1,38 @@
+# Virtual Environment
+venv/
+ENV/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Node Modules and Build files
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Databases
+db.sqlite3
+*.db
+
+# Media uploads (user data)
+backend/media/
+backend/staticfiles/
+
+# IDE / System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Agent logs / System generated files
+.system_generated/
+task.md
+implementation_plan.md
+walkthrough.md
